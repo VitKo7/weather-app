@@ -1,5 +1,5 @@
 import React from 'react';
-import home from '../../pic/home_icon.svg';
+import home from '../../images/home_icon.svg';
 import style from './style.module.css';
 
 
@@ -13,7 +13,7 @@ const Header = () => {
         >
           <img className={style.homeButton_icon} src={home} alt="home-button" />
         </button>
-        <span className={style.title}>Weather app</span>
+        <span data-testid="weather-header" className={style.title}>Weather app</span>
       </div>
     </div>
   )
