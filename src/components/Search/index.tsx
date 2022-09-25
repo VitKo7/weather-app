@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from 'react';
-import searchIcon from '../../images/search_icon.svg'
+import searchIcon from '../../images/search_icon.svg';
+import style from './style.module.css';
 
 interface CityInputProps {
   onChangeCity: (e: string) => void;
@@ -11,32 +12,34 @@ const Search = ({ onChangeCity, onGetWeather }: CityInputProps) => {
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (city.trim() === "") return;
+    if (city.trim() === '') return;
     onGetWeather();
-    setCity("");
+    setCity('');
   };
 
   return (
-    <div className='search_wrapper'>
-      <form className="search_form" onSubmit={(e) => submitHandler(e)}>
-        <label htmlFor="name" className="form__label">
-          Enter a city:
+    <div className={style.search_wrapper}>
+      <form className={style.search_form} onSubmit={(e) => submitHandler(e)}>
+        <label htmlFor="name" className={style.form_label}>
+          Search a city:
         </label>
-        <input
-          type="text"
-          className="form_input"
-          name="name"
-          placeholder='Enter a city name'
-          value={ city }
-          onChange={(e) => {
-            onChangeCity(e.target.value);
-            setCity(e.target.value);
-            }
-          }
-        />
-        <button type="submit" className="search_button">
-          <img src={searchIcon} alt="search" />
-        </button>
+        <div className={style.search_section}>
+          <input
+            type="text"
+            className={style.form_input}
+            name="name"
+            placeholder="Enter a city name"
+            value={city}
+            onChange={(e) => {
+              onChangeCity(e.target.value);
+              setCity(e.target.value);
+            }}
+          />
+
+          <button type="submit" className={style.search_button}>
+            <img src={searchIcon} alt="search" />
+          </button>
+        </div>
       </form>
     </div>
   );

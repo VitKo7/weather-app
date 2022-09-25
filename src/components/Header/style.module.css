@@ -1,10 +1,9 @@
 .header {
   height: 10%;
   padding: 10px;
-  background-color: darkcyan;
+  background-color: var(--primary-color);
   border-radius: 0 0 3px 3px;
-  box-shadow: rgb(0 0 0 / 35%) 0px 3px 12px;
-
+  box-shadow: var(--primary-shadow);
 }
 
 .appBar{
@@ -22,7 +21,7 @@
   cursor: pointer;
   background-color: inherit;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 3px;
+  box-shadow: var(--secondary-shadow);
   margin-left: 1%;
   display: flex;
   align-items: center;
@@ -34,7 +33,7 @@
 }
 
 .title {
-  color: whitesmoke;
+  color: var(--secondary-color);
   margin-left: 3%;
   font-size: 20px;
 }
