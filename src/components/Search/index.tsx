@@ -20,7 +20,7 @@ const Search = ({ onChangeCity, onGetWeather }: CityInputProps) => {
     <div className='search_wrapper'>
       <form className="search_form" onSubmit={(e) => submitHandler(e)}>
         <label htmlFor="name" className="form__label">
-          Enter a city name:
+          Enter a city:
         </label>
         <input
           type="text"
