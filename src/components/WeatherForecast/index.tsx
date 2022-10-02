@@ -1,6 +1,6 @@
-import React from 'react';
 import OneDayWeather from '../OneDayWeather';
 import { IWeatherResponseDTO } from '../../utils/types';
+import style from './style.module.css';
 
 interface WeatherForecastProps {
   weatherData: IWeatherResponseDTO[];
@@ -16,11 +16,12 @@ const WeatherForecast = ({
   selectedCityPopulation,
 }: WeatherForecastProps) => {
   return (
-    <div className="weather_forecast">
-      <div className="selected_city">
-        <h3>Your city:</h3>
-        <span>{selectedCity}, </span>
-        <span>{selectedCountry} </span>
+    <div className={style.weather_forecast}>
+      <div className={style.selected_city_info}>
+        <span className={style.selected_city}>Your city: </span>
+        <strong>
+          {selectedCity}, {selectedCountry}
+        </strong>
         <span>
           The population of {selectedCity} is {selectedCityPopulation} ppl.
         </span>

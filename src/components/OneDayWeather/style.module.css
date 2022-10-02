@@ -1,0 +1,23 @@
+.oneDay_weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2%;
+  padding: var(--primary-padding);
+  box-shadow: var(--secondary-shadow);
+  border-radius: 3px;
+  transition: 0.1s linear;
+}
+.oneDay_weather:hover,
+.oneDay_weather:focus {
+  box-shadow: var(--primary-shadow);
+  cursor: pointer;
+  transform: scale(1.03);
+  background-color: var(--third-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .oneDay_weather {
+    margin-bottom: 1%;
+  }
+}

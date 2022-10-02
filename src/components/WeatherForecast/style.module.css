@@ -1,0 +1,26 @@
+.weather_forecast {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--primary-margin-bottom);
+}
+
+.selected_city_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: var(--primary-margin-bottom);
+  background: var(--secondary-color);
+  border-radius: 13px;
+}
+
+.selected_city,
+.selected_city_info > strong,
+.selected_city_info > span {
+  padding: 2%;
+}
+
+.selected_city_info > strong {
+  color: var(--primary-color);
+  font-size: 20px;
+}

@@ -4,10 +4,14 @@
   --third-color: aliceblue;
   --primary-shadow: rgba(0, 0, 0, 0.35) 0px 3px 12px;
   --secondary-shadow: rgba(0, 0, 0, 0.35) 0px 1px 3px;
+  --primary-margin-bottom: 5%;
+  --primary-padding: 3%;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,11 +21,24 @@ body {
 
 .container {
   margin: 0 auto;
-  min-width: 350px;
+  min-width: 320px; /* iPhone 5S Breakpoint */
 }
 
 .container .content_wrapper {
   display: flex;
   flex-direction: column;
-  padding: 3%;
+  padding: var(--primary-padding);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --primary-margin-bottom: 3%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --primary-margin-bottom: 2%;
+    --primary-padding: 2%;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import searchIcon from '../../images/search_icon.svg';
 import style from './style.module.css';
 
